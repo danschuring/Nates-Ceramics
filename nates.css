@@ -120,6 +120,12 @@ h2 {
   padding-top: 1em;
 }
 
+#projects p {
+  color: white;
+  text-align: center;
+  margin: -1.75em 0em 2em 0em;
+}
+
 #proj-pics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
