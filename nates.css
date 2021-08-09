@@ -78,7 +78,7 @@ nav a:hover {
   background-color: #334;
   color: white;
   text-shadow: 0 0 6px #000;
-  height: 100vh;
+  height: calc(100vh - 3em);
   background-color: #889499;
   background-image: url('bg2.jpg');
   background-repeat: no-repeat;
@@ -211,10 +211,11 @@ h2 {
 .close {
   color: white;
   position: absolute;
-  top: 10px;
-  right: 25px;
+  top: 0.4em;
+  right: 0.7em;
   font-size: 35px;
   font-weight: bold;
+  z-index: 1;
 }
 
 .close:hover,
@@ -315,7 +316,7 @@ img.hover-shadow {
     float: right;
     top: 0;
     z-index: 2;
-    padding: 1.0em;
+    padding: 1em;
     display: block;
     cursor: pointer;
   }
