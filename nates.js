@@ -1,3 +1,25 @@
+/* allows left and right arrow keys and esc key to work slideshow */
+window.addEventListener("keydown", function(event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if event already handled
+  }
+
+  if (event.code === "ArrowLeft") {
+    plusSlides(-1);
+  } else if (event.code === "ArrowRight") {
+    plusSlides(1);
+  } else if (event.code === "Escape") {
+    closeModal();
+  }
+
+  refresh();
+
+  // Consume the event so it doesn't get handled twice
+  event.preventDefault();
+}, true);
+
+
+
 function hamToggle(x) {
   x.classList.toggle("change");
   var x = document.getElementById("navbar");
@@ -48,3 +70,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
