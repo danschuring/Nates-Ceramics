@@ -34,7 +34,7 @@ nav a:hover {
     display: none;
 }
 
-#menu .container:hover {
+.container:hover {
     background-color: #444;
 }
 
