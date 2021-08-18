@@ -20,9 +20,10 @@ window.addEventListener("keydown", function(event) {
 
 
 
-function hamToggle(x) {
-  x.classList.toggle("change");
-  var x = document.getElementById("navbar");
+function toggleMenu() {
+  let y = document.getElementById("container");
+  y.classList.toggle("change");
+  let x = document.getElementById("navbar");
   if (x.className === "navbar") {
     x.className += " responsive";
   } else {
