@@ -3,15 +3,12 @@
 }
 
 body {
-  font-family:Verdana,Arial,sans-serif;
+  font-family: Verdana,Arial,sans-serif;
 }
   
 nav {
   background-color: black;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -19,23 +16,31 @@ nav {
   z-index: 1;
 }
 
-.navbar a {
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#menu a {
+  background-color: black;
   color: white;
   padding: 1em 1.5em;
   text-decoration: none;
 }
 
-nav a:hover {
+#menu a:hover {
   color: black;
   background-color: #ddd;
 }
 
 .container {
-    display: none;
+  display: none;
 }
 
 .container:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 .bar1, .bar2, .bar3 {
@@ -63,7 +68,9 @@ nav a:hover {
   transform: rotate(-45deg) translate(-4px, 4px);
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {
+  opacity: 0;
+}
 
 .change .bar3 {
   margin: 3px 0px 3px 0px;
@@ -71,8 +78,6 @@ nav a:hover {
   -webkit-transform: rotate(45deg) translate(-4.5px, -4.5px);
   transform: rotate(45deg) translate(-4.5px, -4.5px);
 }
-
-
 
 #welcome-section {
   background-color: #334;
@@ -111,8 +116,6 @@ h2 {
 #about p {
   color: white;
 }
-
-
 
 #projects {
   background-color: #333;
@@ -233,8 +236,7 @@ h2 {
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
   cursor: pointer;
   position: fixed;
   bottom: 55%;
@@ -244,12 +246,12 @@ h2 {
   color: white;
   font-weight: bold;
   font-size: 20px;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
   user-select: none;
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Position the "next button" to the right and shape it */
 .next {
   right: 0;
   border-radius: 0.7em 0 0 0.7em;
@@ -262,8 +264,7 @@ h2 {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.prev:hover, .next:hover {
   background-color: rgba(100, 100, 100, 0.75);
 }
 
@@ -312,8 +313,9 @@ img.hover-shadow {
 
 @media only screen and (max-width:600px) {
   nav {
-     display: block;
-     overflow: auto;
+    content: "";
+    clear: both;
+    display: table;
   }
   #proj-pics {
     grid-template-columns: repeat(2, 1fr);
@@ -330,12 +332,15 @@ img.hover-shadow {
     display: block;
     cursor: pointer;
   }
+  #menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
   .navbar a {
     float: none;
     display: none;
-  }
-  .navbar.responsive {
-/*    position: relative; */
   }
   .navbar.responsive a {
     float: none;
